@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Poulami Mitra - Web Developer, Programmer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body> 
+    <div class="container">
+    
+    
+ <div class="sidebar  sidebarGo">
+
+    <nav style="padding: 40px;">
+        <ul>
+            
+            <li><a href="/">Home</a> </li>
+            <li><a href="/intro.html">My Intro</a>  </li>
+            <li><a href="/services.html">Services </a> </li>
+            <li><a href="/project.html">Project </a> </li>
+            <li><a href="/corse.html">Coruse</a> </li>
+        </ul>
+    </nav>
+ </div>
+ <div class="main">
+  <div class="hanburger">
+    <img  class="ham" src="ham.jpeg" alt=""width="23">
+    <img class="cross"src="cross.jpeg" alt=""width="23">
+    </div>
+        <div class="contactform">
+            <h1>CONTACT ME</h1>
+
+
+
+<div>
+  <form method="POST" name="google-sheet">
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+
+    <label for="lname">Phone NO.</label>
+    <input type="text" id="no" name="p.no" placeholder="Your phone no..">
+
+    <label for="lname">Purpose</label>
+    <input type="text" id="purpose" name="purpose" placeholder="purpose..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="india">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  
+    <input type="submit" value="Submit" name="submit">
+  </form>
+</div>
+
+</div>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsSy0WDcEmyX7XCnH7KFJjaIutmSf-hJCzIwNpBTTL_x5Ff4snp8DITeTFaz5LE1lg/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
